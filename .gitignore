@@ -1,0 +1,21 @@
+# PlatformIO / build
+.pio/
+.vscode/
+firmware/.pio/
+firmware/.vscode/
+
+# Python
+__pycache__/
+*.pyc
+
+# Office lock / temp files
+~$*
+*.tmp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build output of the PC simulation
+*.exe
+sim_tasks
