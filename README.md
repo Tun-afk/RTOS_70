@@ -130,16 +130,13 @@ RTOS_70/
 │   ├── src/main.cpp           # Khởi tạo hệ thống + 6 task
 │   ├── include/config.h       # Chân GPIO, chu kỳ, độ ưu tiên, stack
 │   ├── lib/AppLogic/          # Logic thuần: chống dội, kiểm tra số đo, định dạng OLED
-│   ├── monitor/               # Filter Serial Monitor tự ghi log ra file
-│   └── sim/sim_tasks.cpp      # Mô phỏng logic các task trên PC
-├── docs/                      # Sơ đồ mạch, nhật ký làm việc
+│   └── monitor/               # Filter Serial Monitor tự ghi log ra file
+├── docs/                      # Sơ đồ nguyên lý mạch
 ├── evidence/                  # Minh chứng chạy thực tế
 │   ├── logs/                  # Log Serial có mốc thời gian
 │   ├── photos/                # Ảnh mạch
 │   └── videos/                # Video chạy
-├── report/                    # Báo cáo kỹ thuật (.docx) và hình minh hoạ
-├── chu_thich_main_cpp.md      # Chú thích chi tiết main.cpp
-└── instruction.md             # Hướng dẫn, yêu cầu đề và giải thích các task
+└── report/                    # Báo cáo kỹ thuật (.docx) và hình minh hoạ
 ```
 
 ## 7. Build và nạp chương trình
@@ -157,22 +154,9 @@ pio device monitor                       # mở Serial Monitor (115200 baud)
 - Khi mở Serial Monitor, filter `tasklog` tự ghi toàn bộ log vào `evidence/logs/tasks_logs.txt` (**ghi đè** mỗi lần mở monitor; muốn giữ lại một lần chạy thì đổi tên file trước).
 - `platformio.ini` đang bật cờ `-DARDUINO_USB_CDC_ON_BOOT=1` để Serial chạy qua cổng **USB** (native). Nếu cắm cổng **COM** (UART) thì xoá cờ này.
 
-### Mô phỏng logic trên PC (không cần board)
+## 8. Báo cáo
 
-`sim_tasks.cpp` dùng chung `app_logic.h` và `config.h` với firmware, kiểm tra Task 1–6 qua nhiều kịch bản (cảm biến lỗi, nhấn dồn dập, nhiễu phím…):
-
-```bash
-cd firmware
-zig c++ -std=c++17 -O2 -Wall -Wextra -I include -I lib/AppLogic sim/sim_tasks.cpp -o sim_tasks.exe
-./sim_tasks.exe 12        # số lần chạy mỗi phần (mặc định 10)
-```
-
-## 8. Tài liệu
-
-- 📄 **Báo cáo kỹ thuật:** [`report/Report_ProjectCaNhan_FreeRTOS_ESP32.docx`](report/Report_ProjectCaNhan_FreeRTOS_ESP32.docx) — tìm hiểu FreeRTOS, thiết kế hệ thống, phân tích từng task, đánh giá kết quả.
-- 📘 **Hướng dẫn và yêu cầu đề:** [`instruction.md`](instruction.md)
-- 📝 **Chú thích mã nguồn:** [`chu_thich_main_cpp.md`](chu_thich_main_cpp.md)
-- 🗒️ **Nhật ký làm việc:** [`docs/nhat_ky.md`](docs/nhat_ky.md)
+📄 [`report/Report_ProjectCaNhan_FreeRTOS_ESP32.docx`](report/Report_ProjectCaNhan_FreeRTOS_ESP32.docx) — tìm hiểu FreeRTOS, thiết kế hệ thống, phân tích từng task, đánh giá kết quả.
 
 ## 9. Tài liệu tham khảo
 

@@ -15,7 +15,3 @@ __pycache__/
 # OS
 .DS_Store
 Thumbs.db
-
-# Build output of the PC simulation
-*.exe
-sim_tasks

@@ -1,7 +1,7 @@
 #pragma once
 /* ============================================================
  *  config.h — Sơ đồ chân & thông số chung (ESP32-S3 N16R8)
- *  Khớp với bảng chân mục 2.2 trong ../instruction.md
+ *  Khớp với Bảng 3.1 (phân bổ chân GPIO) trong báo cáo
  *
  *  Ngoại vi              GPIO    Ghi chú
  *  LED1 (Task 1)         4       OUTPUT, HIGH = sáng (qua điện trở 330 Ω)

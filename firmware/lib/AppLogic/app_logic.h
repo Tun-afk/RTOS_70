@@ -1,8 +1,7 @@
 #pragma once
 /* ============================================================
  *  app_logic.h — Logic thuần (không phụ thuộc Arduino/FreeRTOS)
- *  Dùng chung cho firmware và chương trình mô phỏng trên PC
- *  (firmware/sim/), nhờ vậy logic được kiểm thử trước khi nạp.
+ *  Tách khỏi main.cpp để mã của các task ngắn gọn, dễ đọc và dễ kiểm tra.
  * ============================================================ */
 #include <stdint.h>
 #include <stddef.h>
