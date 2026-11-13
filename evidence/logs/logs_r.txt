@@ -1,0 +1,1006 @@
+# ================================================================
+# LAN CHAY A - 2026-11-12, ket thuc luc 20:42 (ban moi nhat)
+# Co day du dong khoi dong (thong tin chip, SYS). 104 s, 6 task.
+# Cac dong bat dau bang '#' la ghi chu them vao, khong phai do board in ra.
+# ================================================================
+===== ESP32-S3 N16R8 - FreeRTOS Task 1..6 =====
+Chip  : ESP32-S3 rev 0, 2 nhan @ 240 MHz
+Flash : 16 MB | PSRAM: 8386295 byte | Heap trong: 368008 byte
+Tick  : 1000 Hz
+[   3134 ms][SYS] BH1750 san sang tai dia chi 0x23
+[   3162 ms][SYS] OLED san sang tai dia chi 0x3C
+[   3162 ms][SYS] Da tao Task 1..6 tren core 1
+[   3343 ms][T2] Lan doc 1: anh sang = 90.0 lx
+[   3842 ms][T2] Lan doc 2: anh sang = 91.7 lx
+[   4062 ms][T1] LED1 da dao 10 lan, 10 lan gan nhat mat 1000 ms
+[   4342 ms][T2] Lan doc 3: anh sang = 90.0 lx
+[   4688 ms][T6] OLED OK, lan ve 4: LED2: OFF | LX:90.0 | LED3: OFF
+[   4842 ms][T2] Lan doc 4: anh sang = 90.8 lx
+[   5062 ms][T1] LED1 da dao 20 lan, 10 lan gan nhat mat 1000 ms
+[   5342 ms][T2] Lan doc 5: anh sang = 90.8 lx
+[   5842 ms][T2] Lan doc 6: anh sang = 93.3 lx
+[   6062 ms][T1] LED1 da dao 30 lan, 10 lan gan nhat mat 1000 ms
+[   6342 ms][T2] Lan doc 7: anh sang = 90.8 lx
+[   6688 ms][T6] OLED OK, lan ve 8: LED2: OFF | LX:90.8 | LED3: OFF
+[   6842 ms][T2] Lan doc 8: anh sang = 90.8 lx
+[   7062 ms][T1] LED1 da dao 40 lan, 10 lan gan nhat mat 1000 ms
+[   7342 ms][T2] Lan doc 9: anh sang = 91.7 lx
+[   7842 ms][T2] Lan doc 10: anh sang = 91.7 lx
+[   8062 ms][T1] LED1 da dao 50 lan, 10 lan gan nhat mat 1000 ms
+[   8342 ms][T2] Lan doc 11: anh sang = 90.8 lx
+[   8688 ms][T6] OLED OK, lan ve 12: LED2: OFF | LX:90.8 | LED3: OFF
+[   8842 ms][T2] Lan doc 12: anh sang = 90.8 lx
+[   9062 ms][T1] LED1 da dao 60 lan, 10 lan gan nhat mat 1000 ms
+[   9342 ms][T2] Lan doc 13: anh sang = 91.7 lx
+[   9842 ms][T2] Lan doc 14: anh sang = 92.5 lx
+[  10062 ms][T1] LED1 da dao 70 lan, 10 lan gan nhat mat 1000 ms
+[  10342 ms][T2] Lan doc 15: anh sang = 91.7 lx
+[  10688 ms][T6] OLED OK, lan ve 16: LED2: OFF | LX:91.7 | LED3: OFF
+[  10842 ms][T2] Lan doc 16: anh sang = 93.3 lx
+[  11062 ms][T1] LED1 da dao 80 lan, 10 lan gan nhat mat 1000 ms
+[  11342 ms][T2] Lan doc 17: anh sang = 89.2 lx
+[  11842 ms][T2] Lan doc 18: anh sang = 90.8 lx
+[  12062 ms][T1] LED1 da dao 90 lan, 10 lan gan nhat mat 1000 ms
+[  12342 ms][T2] Lan doc 19: anh sang = 91.7 lx
+[  12688 ms][T6] OLED OK, lan ve 20: LED2: OFF | LX:91.7 | LED3: OFF
+[  12842 ms][T2] Lan doc 20: anh sang = 90.8 lx
+[  13062 ms][T1] LED1 da dao 100 lan, 10 lan gan nhat mat 1000 ms
+[  13342 ms][T2] Lan doc 21: anh sang = 91.7 lx
+[  13842 ms][T2] Lan doc 22: anh sang = 91.7 lx
+[  14062 ms][T1] LED1 da dao 110 lan, 10 lan gan nhat mat 1000 ms
+[  14342 ms][T2] Lan doc 23: anh sang = 90.0 lx
+[  14688 ms][T6] OLED OK, lan ve 24: LED2: OFF | LX:90.0 | LED3: OFF
+[  14842 ms][T2] Lan doc 24: anh sang = 89.2 lx
+[  15062 ms][T1] LED1 da dao 120 lan, 10 lan gan nhat mat 1000 ms
+[  15342 ms][T2] Lan doc 25: anh sang = 90.8 lx
+[  15842 ms][T2] Lan doc 26: anh sang = 90.8 lx
+[  16062 ms][T1] LED1 da dao 130 lan, 10 lan gan nhat mat 1000 ms
+[  16342 ms][T2] Lan doc 27: anh sang = 90.0 lx
+[  16688 ms][T6] OLED OK, lan ve 28: LED2: OFF | LX:90.0 | LED3: OFF
+[  16842 ms][T2] Lan doc 28: anh sang = 91.7 lx
+[  17062 ms][T1] LED1 da dao 140 lan, 10 lan gan nhat mat 1000 ms
+[  17202 ms][T3] Nhan BTN1 -> LED2 = ON
+[  17342 ms][T2] Lan doc 29: anh sang = 90.8 lx
+[  17842 ms][T2] Lan doc 30: anh sang = 93.3 lx
+[  18062 ms][T1] LED1 da dao 150 lan, 10 lan gan nhat mat 1000 ms
+[  18342 ms][T2] Lan doc 31: anh sang = 90.8 lx
+[  18688 ms][T6] OLED OK, lan ve 32: LED2: ON | LX:90.8 | LED3: OFF
+[  18842 ms][T2] Lan doc 32: anh sang = 91.7 lx
+[  19042 ms][T3] Nhan BTN1 -> LED2 = OFF
+[  19062 ms][T1] LED1 da dao 160 lan, 10 lan gan nhat mat 1000 ms
+[  19342 ms][T2] Lan doc 33: anh sang = 91.7 lx
+[  19842 ms][T2] Lan doc 34: anh sang = 91.7 lx
+[  20062 ms][T1] LED1 da dao 170 lan, 10 lan gan nhat mat 1000 ms
+[  20162 ms][T3] Nhan BTN1 -> LED2 = ON
+[  20342 ms][T2] Lan doc 35: anh sang = 90.0 lx
+[  20542 ms][T3] Nhan BTN1 -> LED2 = OFF
+[  20688 ms][T6] OLED OK, lan ve 36: LED2: OFF | LX:90.0 | LED3: OFF
+[  20842 ms][T2] Lan doc 36: anh sang = 90.8 lx
+[  20902 ms][T3] Nhan BTN1 -> LED2 = ON
+[  21062 ms][T1] LED1 da dao 180 lan, 10 lan gan nhat mat 1000 ms
+[  21282 ms][T3] Nhan BTN1 -> LED2 = OFF
+[  21342 ms][T2] Lan doc 37: anh sang = 91.7 lx
+[  21642 ms][T3] Nhan BTN1 -> LED2 = ON
+[  21842 ms][T2] Lan doc 38: anh sang = 91.7 lx
+[  22042 ms][T3] Nhan BTN1 -> LED2 = OFF
+[  22062 ms][T1] LED1 da dao 190 lan, 10 lan gan nhat mat 1000 ms
+[  22342 ms][T2] Lan doc 39: anh sang = 92.5 lx
+[  22422 ms][T3] Nhan BTN1 -> LED2 = ON
+[  22688 ms][T6] OLED OK, lan ve 40: LED2: ON | LX:92.5 | LED3: OFF
+[  22802 ms][T3] Nhan BTN1 -> LED2 = OFF
+[  22842 ms][T2] Lan doc 40: anh sang = 91.7 lx
+[  23062 ms][T1] LED1 da dao 200 lan, 10 lan gan nhat mat 1000 ms
+[  23162 ms][T3] Nhan BTN1 -> LED2 = ON
+[  23342 ms][T2] Lan doc 41: anh sang = 90.8 lx
+[  23562 ms][T3] Nhan BTN1 -> LED2 = OFF
+[  23842 ms][T2] Lan doc 42: anh sang = 90.0 lx
+[  23902 ms][T3] Nhan BTN1 -> LED2 = ON
+[  24062 ms][T1] LED1 da dao 210 lan, 10 lan gan nhat mat 1000 ms
+[  24282 ms][T3] Nhan BTN1 -> LED2 = OFF
+[  24342 ms][T2] Lan doc 43: anh sang = 90.0 lx
+[  24662 ms][T3] Nhan BTN1 -> LED2 = ON
+[  24688 ms][T6] OLED OK, lan ve 44: LED2: ON | LX:90.0 | LED3: OFF
+[  24842 ms][T2] Lan doc 44: anh sang = 91.7 lx
+[  25002 ms][T3] Nhan BTN1 -> LED2 = OFF
+[  25062 ms][T1] LED1 da dao 220 lan, 10 lan gan nhat mat 1000 ms
+[  25342 ms][T2] Lan doc 45: anh sang = 92.5 lx
+[  25842 ms][T2] Lan doc 46: anh sang = 90.8 lx
+[  26062 ms][T1] LED1 da dao 230 lan, 10 lan gan nhat mat 1000 ms
+[  26342 ms][T2] Lan doc 47: anh sang = 91.7 lx
+[  26462 ms][T4] Nhan BTN2 -> cap semaphore
+[  26462 ms][T5] Nhan duoc semaphore -> LED3 ON trong 3 s
+[  26688 ms][T6] OLED OK, lan ve 48: LED2: OFF | LX:91.7 | LED3: 3s
+[  26842 ms][T2] Lan doc 48: anh sang = 93.3 lx
+[  27062 ms][T1] LED1 da dao 240 lan, 10 lan gan nhat mat 1000 ms
+[  27342 ms][T2] Lan doc 49: anh sang = 90.8 lx
+[  27842 ms][T2] Lan doc 50: anh sang = 90.0 lx
+[  28062 ms][T1] LED1 da dao 250 lan, 10 lan gan nhat mat 1000 ms
+[  28062 ms][T3] Nhan BTN1 -> LED2 = ON
+[  28342 ms][T2] Lan doc 51: anh sang = 92.5 lx
+[  28522 ms][T3] Nhan BTN1 -> LED2 = OFF
+[  28688 ms][T6] OLED OK, lan ve 52: LED2: OFF | LX:92.5 | LED3: 1s
+[  28842 ms][T2] Lan doc 52: anh sang = 90.8 lx
+[  28902 ms][T3] Nhan BTN1 -> LED2 = ON
+[  29062 ms][T1] LED1 da dao 260 lan, 10 lan gan nhat mat 1000 ms
+[  29202 ms][T3] Nhan BTN1 -> LED2 = OFF
+[  29342 ms][T2] Lan doc 53: anh sang = 91.7 lx
+[  29462 ms][T5] LED3 OFF sau 3000 ms, cho semaphore tiep
+[  29842 ms][T2] Lan doc 54: anh sang = 90.8 lx
+[  29962 ms][T3] Nhan BTN1 -> LED2 = ON
+[  30062 ms][T1] LED1 da dao 270 lan, 10 lan gan nhat mat 1000 ms
+[  30242 ms][T3] Nhan BTN1 -> LED2 = OFF
+[  30342 ms][T2] Lan doc 55: anh sang = 90.8 lx
+[  30688 ms][T6] OLED OK, lan ve 56: LED2: OFF | LX:90.8 | LED3: OFF
+[  30842 ms][T2] Lan doc 56: anh sang = 91.7 lx
+[  31062 ms][T1] LED1 da dao 280 lan, 10 lan gan nhat mat 1000 ms
+[  31122 ms][T4] Nhan BTN2 -> cap semaphore
+[  31122 ms][T5] Nhan duoc semaphore -> LED3 ON trong 3 s
+[  31342 ms][T2] Lan doc 57: anh sang = 92.5 lx
+[  31842 ms][T2] Lan doc 58: anh sang = 91.7 lx
+[  31982 ms][T4] Nhan BTN2 -> cap semaphore
+[  32062 ms][T1] LED1 da dao 290 lan, 10 lan gan nhat mat 1000 ms
+[  32342 ms][T2] Lan doc 59: anh sang = 90.8 lx
+[  32688 ms][T6] OLED OK, lan ve 60: LED2: OFF | LX:90.8 | LED3: 2s
+[  32842 ms][T2] Lan doc 60: anh sang = 90.8 lx
+[  33062 ms][T1] LED1 da dao 300 lan, 10 lan gan nhat mat 1000 ms
+[  33342 ms][T2] Lan doc 61: anh sang = 91.7 lx
+[  33842 ms][T2] Lan doc 62: anh sang = 90.8 lx
+[  34062 ms][T1] LED1 da dao 310 lan, 10 lan gan nhat mat 1000 ms
+[  34122 ms][T5] LED3 OFF sau 3000 ms, cho semaphore tiep
+[  34122 ms][T5] Nhan duoc semaphore -> LED3 ON trong 3 s
+[  34342 ms][T2] Lan doc 63: anh sang = 91.7 lx
+[  34688 ms][T6] OLED OK, lan ve 64: LED2: OFF | LX:91.7 | LED3: 3s
+[  34842 ms][T2] Lan doc 64: anh sang = 90.0 lx
+[  35062 ms][T1] LED1 da dao 320 lan, 10 lan gan nhat mat 1000 ms
+[  35342 ms][T2] Lan doc 65: anh sang = 90.8 lx
+[  35842 ms][T2] Lan doc 66: anh sang = 90.0 lx
+[  36062 ms][T1] LED1 da dao 330 lan, 10 lan gan nhat mat 1000 ms
+[  36342 ms][T2] Lan doc 67: anh sang = 92.5 lx
+[  36688 ms][T6] OLED OK, lan ve 68: LED2: OFF | LX:92.5 | LED3: 1s
+[  36842 ms][T2] Lan doc 68: anh sang = 90.0 lx
+[  37062 ms][T1] LED1 da dao 340 lan, 10 lan gan nhat mat 1000 ms
+[  37122 ms][T5] LED3 OFF sau 3000 ms, cho semaphore tiep
+[  37342 ms][T2] Lan doc 69: anh sang = 91.7 lx
+[  37842 ms][T2] Lan doc 70: anh sang = 90.8 lx
+[  37962 ms][T4] Nhan BTN2 -> cap semaphore
+[  37962 ms][T5] Nhan duoc semaphore -> LED3 ON trong 3 s
+[  38062 ms][T1] LED1 da dao 350 lan, 10 lan gan nhat mat 1000 ms
+[  38342 ms][T2] Lan doc 71: anh sang = 90.8 lx
+[  38688 ms][T6] OLED OK, lan ve 72: LED2: OFF | LX:90.8 | LED3: 3s
+[  38842 ms][T2] Lan doc 72: anh sang = 90.0 lx
+[  39062 ms][T1] LED1 da dao 360 lan, 10 lan gan nhat mat 1000 ms
+[  39342 ms][T2] Lan doc 73: anh sang = 90.8 lx
+[  39542 ms][T3] Nhan BTN1 -> LED2 = ON
+[  39842 ms][T2] Lan doc 74: anh sang = 93.3 lx
+[  40062 ms][T1] LED1 da dao 370 lan, 10 lan gan nhat mat 1000 ms
+[  40342 ms][T2] Lan doc 75: anh sang = 91.7 lx
+[  40688 ms][T6] OLED OK, lan ve 76: LED2: ON | LX:91.7 | LED3: 1s
+[  40842 ms][T2] Lan doc 76: anh sang = 91.7 lx
+[  40962 ms][T5] LED3 OFF sau 3000 ms, cho semaphore tiep
+[  41062 ms][T1] LED1 da dao 380 lan, 10 lan gan nhat mat 1000 ms
+[  41322 ms][T4] Nhan BTN2 -> cap semaphore
+[  41322 ms][T5] Nhan duoc semaphore -> LED3 ON trong 3 s
+[  41342 ms][T2] Lan doc 77: anh sang = 90.8 lx
+[  41842 ms][T2] Lan doc 78: anh sang = 90.8 lx
+[  42062 ms][T1] LED1 da dao 390 lan, 10 lan gan nhat mat 1000 ms
+[  42342 ms][T2] Lan doc 79: anh sang = 91.7 lx
+[  42688 ms][T6] OLED OK, lan ve 80: LED2: ON | LX:91.7 | LED3: 2s
+[  42842 ms][T2] Lan doc 80: anh sang = 92.5 lx
+[  43042 ms][T4] Nhan BTN2 -> cap semaphore
+[  43062 ms][T1] LED1 da dao 400 lan, 10 lan gan nhat mat 1000 ms
+[  43342 ms][T2] Lan doc 81: anh sang = 92.5 lx
+[  43642 ms][T3] Nhan BTN1 -> LED2 = OFF
+[  43842 ms][T2] Lan doc 82: anh sang = 90.8 lx
+[  44062 ms][T1] LED1 da dao 410 lan, 10 lan gan nhat mat 1000 ms
+[  44122 ms][T3] Nhan BTN1 -> LED2 = ON
+[  44322 ms][T5] LED3 OFF sau 3000 ms, cho semaphore tiep
+[  44322 ms][T5] Nhan duoc semaphore -> LED3 ON trong 3 s
+[  44342 ms][T2] Lan doc 83: anh sang = 93.3 lx
+[  44688 ms][T6] OLED OK, lan ve 84: LED2: ON | LX:93.3 | LED3: 3s
+[  44842 ms][T2] Lan doc 84: anh sang = 90.8 lx
+[  45062 ms][T1] LED1 da dao 420 lan, 10 lan gan nhat mat 1000 ms
+[  45142 ms][T4] Nhan BTN2 -> cap semaphore
+[  45342 ms][T2] Lan doc 85: anh sang = 90.8 lx
+[  45802 ms][T3] Nhan BTN1 -> LED2 = OFF
+[  45842 ms][T2] Lan doc 86: anh sang = 91.7 lx
+[  46062 ms][T1] LED1 da dao 430 lan, 10 lan gan nhat mat 1000 ms
+[  46182 ms][T3] Nhan BTN1 -> LED2 = ON
+[  46342 ms][T2] Lan doc 87: anh sang = 91.7 lx
+[  46522 ms][T3] Nhan BTN1 -> LED2 = OFF
+[  46688 ms][T6] OLED OK, lan ve 88: LED2: OFF | LX:91.7 | LED3: 1s
+[  46842 ms][T2] Lan doc 88: anh sang = 91.7 lx
+[  46942 ms][T3] Nhan BTN1 -> LED2 = ON
+[  47062 ms][T1] LED1 da dao 440 lan, 10 lan gan nhat mat 1000 ms
+[  47322 ms][T5] LED3 OFF sau 3000 ms, cho semaphore tiep
+[  47322 ms][T5] Nhan duoc semaphore -> LED3 ON trong 3 s
+[  47342 ms][T2] Lan doc 89: anh sang = 90.8 lx
+[  47842 ms][T2] Lan doc 90: anh sang = 89.2 lx
+[  48062 ms][T1] LED1 da dao 450 lan, 10 lan gan nhat mat 1000 ms
+[  48102 ms][T4] Nhan BTN2 -> cap semaphore
+[  48342 ms][T2] Lan doc 91: anh sang = 92.5 lx
+[  48688 ms][T6] OLED OK, lan ve 92: LED2: ON | LX:92.5 | LED3: 2s
+[  48722 ms][T3] Nhan BTN1 -> LED2 = OFF
+[  48842 ms][T2] Lan doc 92: anh sang = 92.5 lx
+[  49042 ms][T3] Nhan BTN1 -> LED2 = ON
+[  49062 ms][T1] LED1 da dao 460 lan, 10 lan gan nhat mat 1000 ms
+[  49342 ms][T2] Lan doc 93: anh sang = 92.5 lx
+[  49382 ms][T3] Nhan BTN1 -> LED2 = OFF
+[  49842 ms][T2] Lan doc 94: anh sang = 90.0 lx
+[  49882 ms][T3] Nhan BTN1 -> LED2 = ON
+[  50062 ms][T1] LED1 da dao 470 lan, 10 lan gan nhat mat 1000 ms
+[  50202 ms][T3] Nhan BTN1 -> LED2 = OFF
+[  50322 ms][T5] LED3 OFF sau 3000 ms, cho semaphore tiep
+[  50322 ms][T5] Nhan duoc semaphore -> LED3 ON trong 3 s
+[  50342 ms][T2] Lan doc 95: anh sang = 90.8 lx
+[  50462 ms][T3] Nhan BTN1 -> LED2 = ON
+[  50688 ms][T6] OLED OK, lan ve 96: LED2: ON | LX:90.8 | LED3: 3s
+[  50842 ms][T2] Lan doc 96: anh sang = 91.7 lx
+[  51062 ms][T1] LED1 da dao 480 lan, 10 lan gan nhat mat 1000 ms
+[  51342 ms][T2] Lan doc 97: anh sang = 91.7 lx
+[  51842 ms][T2] Lan doc 98: anh sang = 92.5 lx
+[  52062 ms][T1] LED1 da dao 490 lan, 10 lan gan nhat mat 1000 ms
+[  52342 ms][T2] Lan doc 99: anh sang = 91.7 lx
+[  52688 ms][T6] OLED OK, lan ve 100: LED2: ON | LX:91.7 | LED3: 1s
+[  52842 ms][T2] Lan doc 100: anh sang = 93.3 lx
+[  53062 ms][T1] LED1 da dao 500 lan, 10 lan gan nhat mat 1000 ms
+[  53322 ms][T5] LED3 OFF sau 3000 ms, cho semaphore tiep
+[  53342 ms][T2] Lan doc 101: anh sang = 91.7 lx
+[  53842 ms][T2] Lan doc 102: anh sang = 92.5 lx
+[  54062 ms][T1] LED1 da dao 510 lan, 10 lan gan nhat mat 1000 ms
+[  54342 ms][T2] Lan doc 103: anh sang = 91.7 lx
+[  54688 ms][T6] OLED OK, lan ve 104: LED2: ON | LX:91.7 | LED3: OFF
+[  54842 ms][T2] Lan doc 104: anh sang = 92.5 lx
+[  55062 ms][T1] LED1 da dao 520 lan, 10 lan gan nhat mat 1000 ms
+[  55342 ms][T2] Lan doc 105: anh sang = 90.8 lx
+[  55842 ms][T2] Lan doc 106: anh sang = 91.7 lx
+[  56062 ms][T1] LED1 da dao 530 lan, 10 lan gan nhat mat 1000 ms
+[  56342 ms][T2] Lan doc 107: anh sang = 91.7 lx
+[  56688 ms][T6] OLED OK, lan ve 108: LED2: ON | LX:91.7 | LED3: OFF
+[  56842 ms][T2] Lan doc 108: anh sang = 93.3 lx
+[  57062 ms][T1] LED1 da dao 540 lan, 10 lan gan nhat mat 1000 ms
+[  57342 ms][T2] Lan doc 109: anh sang = 92.5 lx
+[  57842 ms][T2] Lan doc 110: anh sang = 92.5 lx
+[  58062 ms][T1] LED1 da dao 550 lan, 10 lan gan nhat mat 1000 ms
+[  58342 ms][T2] Lan doc 111: anh sang = 90.0 lx
+[  58688 ms][T6] OLED OK, lan ve 112: LED2: ON | LX:90.0 | LED3: OFF
+[  58842 ms][T2] Lan doc 112: anh sang = 88.3 lx
+[  59062 ms][T1] LED1 da dao 560 lan, 10 lan gan nhat mat 1000 ms
+[  59342 ms][T2] Lan doc 113: anh sang = 86.7 lx
+[  59842 ms][T2] Lan doc 114: anh sang = 72.5 lx
+[  60062 ms][T1] LED1 da dao 570 lan, 10 lan gan nhat mat 1000 ms
+[  60342 ms][T2] Lan doc 115: anh sang = 1.7 lx
+[  60688 ms][T6] OLED OK, lan ve 116: LED2: ON | LX:1.7 | LED3: OFF
+[  60842 ms][T2] Lan doc 116: anh sang = 0.8 lx
+[  61062 ms][T1] LED1 da dao 580 lan, 10 lan gan nhat mat 1000 ms
+[  61342 ms][T2] Lan doc 117: anh sang = 0.8 lx
+[  61842 ms][T2] Lan doc 118: anh sang = 1.7 lx
+[  62062 ms][T1] LED1 da dao 590 lan, 10 lan gan nhat mat 1000 ms
+[  62342 ms][T2] Lan doc 119: anh sang = 0.8 lx
+[  62688 ms][T6] OLED OK, lan ve 120: LED2: ON | LX:0.8 | LED3: OFF
+[  62842 ms][T2] Lan doc 120: anh sang = 1.7 lx
+[  63062 ms][T1] LED1 da dao 600 lan, 10 lan gan nhat mat 1000 ms
+[  63342 ms][T2] Lan doc 121: anh sang = 59.2 lx
+[  63842 ms][T2] Lan doc 122: anh sang = 88.3 lx
+[  64062 ms][T1] LED1 da dao 610 lan, 10 lan gan nhat mat 1000 ms
+[  64342 ms][T2] Lan doc 123: anh sang = 0.8 lx
+[  64688 ms][T6] OLED OK, lan ve 124: LED2: ON | LX:0.8 | LED3: OFF
+[  64842 ms][T2] Lan doc 124: anh sang = 0.8 lx
+[  65062 ms][T1] LED1 da dao 620 lan, 10 lan gan nhat mat 1000 ms
+[  65342 ms][T2] Lan doc 125: anh sang = 0.8 lx
+[  65842 ms][T2] Lan doc 126: anh sang = 0.8 lx
+[  66062 ms][T1] LED1 da dao 630 lan, 10 lan gan nhat mat 1000 ms
+[  66342 ms][T2] Lan doc 127: anh sang = 1.7 lx
+[  66688 ms][T6] OLED OK, lan ve 128: LED2: ON | LX:1.7 | LED3: OFF
+[  66842 ms][T2] Lan doc 128: anh sang = 0.8 lx
+[  67062 ms][T1] LED1 da dao 640 lan, 10 lan gan nhat mat 1000 ms
+[  67342 ms][T2] Lan doc 129: anh sang = 0.8 lx
+[  67842 ms][T2] Lan doc 130: anh sang = 1.7 lx
+[  68062 ms][T1] LED1 da dao 650 lan, 10 lan gan nhat mat 1000 ms
+[  68342 ms][T2] Lan doc 131: anh sang = 0.8 lx
+[  68562 ms][T3] Nhan BTN1 -> LED2 = OFF
+[  68688 ms][T6] OLED OK, lan ve 132: LED2: OFF | LX:0.8 | LED3: OFF
+[  68842 ms][T2] Lan doc 132: anh sang = 0.8 lx
+[  69062 ms][T1] LED1 da dao 660 lan, 10 lan gan nhat mat 1000 ms
+[  69282 ms][T4] Nhan BTN2 -> cap semaphore
+[  69282 ms][T5] Nhan duoc semaphore -> LED3 ON trong 3 s
+[  69342 ms][T2] Lan doc 133: anh sang = 0.0 lx
+[  69842 ms][T2] Lan doc 134: anh sang = 1.7 lx
+[  70062 ms][T1] LED1 da dao 670 lan, 10 lan gan nhat mat 1000 ms
+[  70342 ms][T2] Lan doc 135: anh sang = 1.7 lx
+[  70688 ms][T6] OLED OK, lan ve 136: LED2: OFF | LX:1.7 | LED3: 2s
+[  70842 ms][T2] Lan doc 136: anh sang = 0.8 lx
+[  71062 ms][T1] LED1 da dao 680 lan, 10 lan gan nhat mat 1000 ms
+[  71202 ms][T3] Nhan BTN1 -> LED2 = ON
+[  71342 ms][T2] Lan doc 137: anh sang = 0.8 lx
+[  71842 ms][T2] Lan doc 138: anh sang = 0.8 lx
+[  72062 ms][T1] LED1 da dao 690 lan, 10 lan gan nhat mat 1000 ms
+[  72202 ms][T3] Nhan BTN1 -> LED2 = OFF
+[  72282 ms][T5] LED3 OFF sau 3000 ms, cho semaphore tiep
+[  72342 ms][T2] Lan doc 139: anh sang = 0.0 lx
+[  72687 ms][T6] OLED OK, lan ve 140: LED2: OFF | LX:0.0 | LED3: OFF
+[  72842 ms][T2] Lan doc 140: anh sang = 0.0 lx
+[  73062 ms][T1] LED1 da dao 700 lan, 10 lan gan nhat mat 1000 ms
+[  73342 ms][T2] Lan doc 141: anh sang = 90.8 lx
+[  73842 ms][T2] Lan doc 142: anh sang = 90.0 lx
+[  74062 ms][T1] LED1 da dao 710 lan, 10 lan gan nhat mat 1000 ms
+[  74342 ms][T2] Lan doc 143: anh sang = 92.5 lx
+[  74688 ms][T6] OLED OK, lan ve 144: LED2: OFF | LX:92.5 | LED3: OFF
+[  74842 ms][T2] Lan doc 144: anh sang = 173.3 lx
+[  75062 ms][T1] LED1 da dao 720 lan, 10 lan gan nhat mat 1000 ms
+[  75342 ms][T2] Lan doc 145: anh sang = 281.7 lx
+[  75842 ms][T2] Lan doc 146: anh sang = 385.8 lx
+[  76062 ms][T1] LED1 da dao 730 lan, 10 lan gan nhat mat 1000 ms
+[  76342 ms][T2] Lan doc 147: anh sang = 288.3 lx
+[  76688 ms][T6] OLED OK, lan ve 148: LED2: OFF | LX:288.3 | LED3: OFF
+[  76842 ms][T2] Lan doc 148: anh sang = 297.5 lx
+[  77062 ms][T1] LED1 da dao 740 lan, 10 lan gan nhat mat 1000 ms
+[  77342 ms][T2] Lan doc 149: anh sang = 694.2 lx
+[  77842 ms][T2] Lan doc 150: anh sang = 1397.5 lx
+[  78062 ms][T1] LED1 da dao 750 lan, 10 lan gan nhat mat 1000 ms
+[  78342 ms][T2] Lan doc 151: anh sang = 2122.5 lx
+[  78442 ms][T3] Nhan BTN1 -> LED2 = ON
+[  78688 ms][T6] OLED OK, lan ve 152: LED2: ON | LX:2122.5 | LED3: OFF
+[  78842 ms][T2] Lan doc 152: anh sang = 1812.5 lx
+[  79062 ms][T1] LED1 da dao 760 lan, 10 lan gan nhat mat 1000 ms
+[  79342 ms][T2] Lan doc 153: anh sang = 1700.8 lx
+[  79842 ms][T2] Lan doc 154: anh sang = 1390.8 lx
+[  80022 ms][T4] Nhan BTN2 -> cap semaphore
+[  80022 ms][T5] Nhan duoc semaphore -> LED3 ON trong 3 s
+[  80062 ms][T1] LED1 da dao 770 lan, 10 lan gan nhat mat 1000 ms
+[  80342 ms][T2] Lan doc 155: anh sang = 1214.2 lx
+[  80688 ms][T6] OLED OK, lan ve 156: LED2: ON | LX:1214.2 | LED3: 3s
+[  80842 ms][T2] Lan doc 156: anh sang = 1411.7 lx
+[  81062 ms][T1] LED1 da dao 780 lan, 10 lan gan nhat mat 1000 ms
+[  81342 ms][T2] Lan doc 157: anh sang = 1373.3 lx
+[  81842 ms][T2] Lan doc 158: anh sang = 1370.0 lx
+[  81942 ms][T3] Nhan BTN1 -> LED2 = OFF
+[  82062 ms][T1] LED1 da dao 790 lan, 10 lan gan nhat mat 1000 ms
+[  82302 ms][T3] Nhan BTN1 -> LED2 = ON
+[  82342 ms][T2] Lan doc 159: anh sang = 1348.3 lx
+[  82562 ms][T3] Nhan BTN1 -> LED2 = OFF
+[  82688 ms][T6] OLED OK, lan ve 160: LED2: OFF | LX:1348.3 | LED3: 1s
+[  82822 ms][T3] Nhan BTN1 -> LED2 = ON
+[  82842 ms][T2] Lan doc 160: anh sang = 1340.0 lx
+[  83022 ms][T5] LED3 OFF sau 3000 ms, cho semaphore tiep
+[  83062 ms][T1] LED1 da dao 800 lan, 10 lan gan nhat mat 1000 ms
+[  83222 ms][T4] Nhan BTN2 -> cap semaphore
+[  83222 ms][T5] Nhan duoc semaphore -> LED3 ON trong 3 s
+[  83342 ms][T2] Lan doc 161: anh sang = 1380.0 lx
+[  83802 ms][T3] Nhan BTN1 -> LED2 = OFF
+[  83842 ms][T2] Lan doc 162: anh sang = 1454.2 lx
+[  84062 ms][T1] LED1 da dao 810 lan, 10 lan gan nhat mat 1000 ms
+[  84082 ms][T3] Nhan BTN1 -> LED2 = ON
+[  84342 ms][T2] Lan doc 163: anh sang = 1456.7 lx
+[  84362 ms][T3] Nhan BTN1 -> LED2 = OFF
+[  84622 ms][T3] Nhan BTN1 -> LED2 = ON
+[  84688 ms][T6] OLED OK, lan ve 164: LED2: ON | LX:1456.7 | LED3: 2s
+[  84842 ms][T2] Lan doc 164: anh sang = 1450.8 lx
+[  84902 ms][T3] Nhan BTN1 -> LED2 = OFF
+[  85062 ms][T1] LED1 da dao 820 lan, 10 lan gan nhat mat 1000 ms
+[  85142 ms][T3] Nhan BTN1 -> LED2 = ON
+[  85342 ms][T2] Lan doc 165: anh sang = 1515.0 lx
+[  85562 ms][T4] Nhan BTN2 -> cap semaphore
+[  85842 ms][T2] Lan doc 166: anh sang = 1496.7 lx
+[  86062 ms][T1] LED1 da dao 830 lan, 10 lan gan nhat mat 1000 ms
+[  86102 ms][T3] Nhan BTN1 -> LED2 = OFF
+[  86222 ms][T5] LED3 OFF sau 3000 ms, cho semaphore tiep
+[  86222 ms][T5] Nhan duoc semaphore -> LED3 ON trong 3 s
+[  86342 ms][T2] Lan doc 167: anh sang = 1532.5 lx
+[  86602 ms][T3] Nhan BTN1 -> LED2 = ON
+[  86688 ms][T6] OLED OK, lan ve 168: LED2: ON | LX:1532.5 | LED3: 3s
+[  86842 ms][T2] Lan doc 168: anh sang = 1577.5 lx
+[  86862 ms][T3] Nhan BTN1 -> LED2 = OFF
+[  87062 ms][T1] LED1 da dao 840 lan, 10 lan gan nhat mat 1000 ms
+[  87102 ms][T3] Nhan BTN1 -> LED2 = ON
+[  87342 ms][T2] Lan doc 169: anh sang = 1515.8 lx
+[  87842 ms][T2] Lan doc 170: anh sang = 1564.2 lx
+[  88062 ms][T1] LED1 da dao 850 lan, 10 lan gan nhat mat 1000 ms
+[  88342 ms][T2] Lan doc 171: anh sang = 1555.0 lx
+[  88688 ms][T6] OLED OK, lan ve 172: LED2: ON | LX:1555.0 | LED3: 1s
+[  88822 ms][T4] Nhan BTN2 -> cap semaphore
+[  88842 ms][T2] Lan doc 172: anh sang = 1567.5 lx
+[  89062 ms][T1] LED1 da dao 860 lan, 10 lan gan nhat mat 1000 ms
+[  89222 ms][T5] LED3 OFF sau 3000 ms, cho semaphore tiep
+[  89222 ms][T5] Nhan duoc semaphore -> LED3 ON trong 3 s
+[  89342 ms][T2] Lan doc 173: anh sang = 1599.2 lx
+[  89842 ms][T2] Lan doc 174: anh sang = 1624.2 lx
+[  90062 ms][T1] LED1 da dao 870 lan, 10 lan gan nhat mat 1000 ms
+[  90342 ms][T2] Lan doc 175: anh sang = 6620.0 lx
+[  90688 ms][T6] OLED OK, lan ve 176: LED2: ON | LX:6620.0 | LED3: 2s
+[  90842 ms][T2] Lan doc 176: anh sang = 7142.5 lx
+[  91062 ms][T1] LED1 da dao 880 lan, 10 lan gan nhat mat 1000 ms
+[  91322 ms][T3] Nhan BTN1 -> LED2 = OFF
+[  91342 ms][T2] Lan doc 177: anh sang = 6470.0 lx
+[  91842 ms][T2] Lan doc 178: anh sang = 6215.8 lx
+[  92062 ms][T1] LED1 da dao 890 lan, 10 lan gan nhat mat 1000 ms
+[  92222 ms][T5] LED3 OFF sau 3000 ms, cho semaphore tiep
+[  92342 ms][T2] Lan doc 179: anh sang = 4595.8 lx
+[  92688 ms][T6] OLED OK, lan ve 180: LED2: OFF | LX:4595.8 | LED3: OFF
+[  92842 ms][T2] Lan doc 180: anh sang = 323.3 lx
+[  93062 ms][T1] LED1 da dao 900 lan, 10 lan gan nhat mat 1000 ms
+[  93342 ms][T2] Lan doc 181: anh sang = 97.5 lx
+[  93842 ms][T2] Lan doc 182: anh sang = 94.2 lx
+[  94062 ms][T1] LED1 da dao 910 lan, 10 lan gan nhat mat 1000 ms
+[  94342 ms][T2] Lan doc 183: anh sang = 93.3 lx
+[  94688 ms][T6] OLED OK, lan ve 184: LED2: OFF | LX:93.3 | LED3: OFF
+[  94842 ms][T2] Lan doc 184: anh sang = 92.5 lx
+[  95062 ms][T1] LED1 da dao 920 lan, 10 lan gan nhat mat 1000 ms
+[  95342 ms][T2] Lan doc 185: anh sang = 90.8 lx
+[  95842 ms][T2] Lan doc 186: anh sang = 92.5 lx
+[  96062 ms][T1] LED1 da dao 930 lan, 10 lan gan nhat mat 1000 ms
+[  96342 ms][T2] Lan doc 187: anh sang = 92.5 lx
+[  96688 ms][T6] OLED OK, lan ve 188: LED2: OFF | LX:92.5 | LED3: OFF
+[  96842 ms][T2] Lan doc 188: anh sang = 93.3 lx
+[  97062 ms][T1] LED1 da dao 940 lan, 10 lan gan nhat mat 1000 ms
+[  97342 ms][T2] Lan doc 189: anh sang = 91.7 lx
+[  97842 ms][T2] Lan doc 190: anh sang = 91.7 lx
+[  98062 ms][T1] LED1 da dao 950 lan, 10 lan gan nhat mat 1000 ms
+[  98342 ms][T2] Lan doc 191: anh sang = 92.5 lx
+[  98682 ms][T3] Nhan BTN1 -> LED2 = ON
+[  98688 ms][T6] OLED OK, lan ve 192: LED2: OFF | LX:92.5 | LED3: OFF
+[  98842 ms][T2] Lan doc 192: anh sang = 92.5 lx
+[  99062 ms][T1] LED1 da dao 960 lan, 10 lan gan nhat mat 1000 ms
+[  99342 ms][T2] Lan doc 193: anh sang = 92.5 lx
+[  99542 ms][T4] Nhan BTN2 -> cap semaphore
+[  99542 ms][T5] Nhan duoc semaphore -> LED3 ON trong 3 s
+[  99842 ms][T2] Lan doc 194: anh sang = 94.2 lx
+[ 100062 ms][T1] LED1 da dao 970 lan, 10 lan gan nhat mat 1000 ms
+[ 100342 ms][T2] Lan doc 195: anh sang = 94.2 lx
+[ 100688 ms][T6] OLED OK, lan ve 196: LED2: ON | LX:94.2 | LED3: 2s
+[ 100842 ms][T2] Lan doc 196: anh sang = 92.5 lx
+[ 101062 ms][T1] LED1 da dao 980 lan, 10 lan gan nhat mat 1000 ms
+[ 101342 ms][T2] Lan doc 197: anh sang = 95.0 lx
+[ 101842 ms][T2] Lan doc 198: anh sang = 92.5 lx
+[ 102062 ms][T1] LED1 da dao 990 lan, 10 lan gan nhat mat 1000 ms
+[ 102342 ms][T2] Lan doc 199: anh sang = 91.7 lx
+[ 102542 ms][T5] LED3 OFF sau 3000 ms, cho semaphore tiep
+[ 102688 ms][T6] OLED OK, lan ve 200: LED2: ON | LX:91.7 | LED3: OFF
+[ 102842 ms][T2] Lan doc 200: anh sang = 94.2 lx
+[ 103062 ms][T1] LED1 da dao 1000 lan, 10 lan gan nhat mat 1000 ms
+[ 103342 ms][T2] Lan doc 201: anh sang = 91.7 lx
+[ 103462 ms][T3] Nhan BTN1 -> LED2 = OFF
+[ 103842 ms][T2] Lan doc 202: anh sang = 94.2 lx
+[ 104062 ms][T1] LED1 da dao 1010 lan, 10 lan gan nhat mat 1000 ms
+[ 104342 ms][T2] Lan doc 203: anh sang = 91.7 lx
+[ 104688 ms][T6] OLED OK, lan ve 204: LED2: OFF | LX:91.7 | LED3: OFF
+[ 104842 ms][T2] Lan doc 204: anh sang = 92.5 lx
+[ 105062 ms][T1] LED1 da dao 1020 lan, 10 lan gan nhat mat 1000 ms
+[ 105342 ms][T2] Lan doc 205: anh sang = 90.8 lx
+[ 105842 ms][T2] Lan doc 206: anh sang = 91.7 lx
+[ 106062 ms][T1] LED1 da dao 1030 lan, 10 lan gan nhat mat 1000 ms
+[ 106342 ms][T2] Lan doc 207: anh sang = 90.0 lx
+[ 106688 ms][T6] OLED OK, lan ve 208: LED2: OFF | LX:90.0 | LED3: OFF
+[ 106842 ms][T2] Lan doc 208: anh sang = 90.8 lx
+[ 107062 ms][T1] LED1 da dao 1040 lan, 10 lan gan nhat mat 1000 ms
+[ 107342 ms][T2] Lan doc 209: anh sang = 90.8 lx
+
+# ================================================================
+# LAN CHAY B - 2026-11-12, ket thuc luc 20:30 (lan chay truoc do)
+# Giu lai vi co minh chung binary semaphore tu choi lan nhan thua
+# (cac dong 'semaphore dang co san'), lan chay A khong co. 128 s.
+# Khong co dong khoi dong vi luc do firmware chi cho 1,5 s.
+# ================================================================
+[   1943 ms][T2] Lan doc 1: anh sang = 90.8 lx
+[   2443 ms][T2] Lan doc 2: anh sang = 91.7 lx
+[   2662 ms][T1] LED1 da dao 10 lan, 10 lan gan nhat mat 1000 ms
+[   2943 ms][T2] Lan doc 3: anh sang = 92.5 lx
+[   3288 ms][T6] OLED OK, lan ve 4: LED2: OFF | LX:92.5 | LED3: OFF
+[   3443 ms][T2] Lan doc 4: anh sang = 89.2 lx
+[   3662 ms][T1] LED1 da dao 20 lan, 10 lan gan nhat mat 1000 ms
+[   3943 ms][T2] Lan doc 5: anh sang = 91.7 lx
+[   4443 ms][T2] Lan doc 6: anh sang = 90.0 lx
+[   4662 ms][T1] LED1 da dao 30 lan, 10 lan gan nhat mat 1000 ms
+[   4943 ms][T2] Lan doc 7: anh sang = 91.7 lx
+[   5288 ms][T6] OLED OK, lan ve 8: LED2: OFF | LX:91.7 | LED3: OFF
+[   5443 ms][T2] Lan doc 8: anh sang = 92.5 lx
+[   5662 ms][T1] LED1 da dao 40 lan, 10 lan gan nhat mat 1000 ms
+[   5943 ms][T2] Lan doc 9: anh sang = 92.5 lx
+[   6443 ms][T2] Lan doc 10: anh sang = 91.7 lx
+[   6662 ms][T1] LED1 da dao 50 lan, 10 lan gan nhat mat 1000 ms
+[   6943 ms][T2] Lan doc 11: anh sang = 90.8 lx
+[   7288 ms][T6] OLED OK, lan ve 12: LED2: OFF | LX:90.8 | LED3: OFF
+[   7443 ms][T2] Lan doc 12: anh sang = 91.7 lx
+[   7662 ms][T1] LED1 da dao 60 lan, 10 lan gan nhat mat 1000 ms
+[   7943 ms][T2] Lan doc 13: anh sang = 90.0 lx
+[   8443 ms][T2] Lan doc 14: anh sang = 92.5 lx
+[   8662 ms][T1] LED1 da dao 70 lan, 10 lan gan nhat mat 1000 ms
+[   8943 ms][T2] Lan doc 15: anh sang = 92.5 lx
+[   9288 ms][T6] OLED OK, lan ve 16: LED2: OFF | LX:92.5 | LED3: OFF
+[   9443 ms][T2] Lan doc 16: anh sang = 91.7 lx
+[   9662 ms][T1] LED1 da dao 80 lan, 10 lan gan nhat mat 1000 ms
+[   9943 ms][T2] Lan doc 17: anh sang = 91.7 lx
+[  10443 ms][T2] Lan doc 18: anh sang = 90.0 lx
+[  10662 ms][T1] LED1 da dao 90 lan, 10 lan gan nhat mat 1000 ms
+[  10943 ms][T2] Lan doc 19: anh sang = 92.5 lx
+[  11288 ms][T6] OLED OK, lan ve 20: LED2: OFF | LX:92.5 | LED3: OFF
+[  11443 ms][T2] Lan doc 20: anh sang = 91.7 lx
+[  11662 ms][T1] LED1 da dao 100 lan, 10 lan gan nhat mat 1000 ms
+[  11943 ms][T2] Lan doc 21: anh sang = 92.5 lx
+[  12443 ms][T2] Lan doc 22: anh sang = 90.8 lx
+[  12662 ms][T1] LED1 da dao 110 lan, 10 lan gan nhat mat 1000 ms
+[  12943 ms][T2] Lan doc 23: anh sang = 90.8 lx
+[  13288 ms][T6] OLED OK, lan ve 24: LED2: OFF | LX:90.8 | LED3: OFF
+[  13443 ms][T2] Lan doc 24: anh sang = 90.8 lx
+[  13662 ms][T1] LED1 da dao 120 lan, 10 lan gan nhat mat 1000 ms
+[  13943 ms][T2] Lan doc 25: anh sang = 90.0 lx
+[  14443 ms][T2] Lan doc 26: anh sang = 92.5 lx
+[  14662 ms][T1] LED1 da dao 130 lan, 10 lan gan nhat mat 1000 ms
+[  14943 ms][T2] Lan doc 27: anh sang = 93.3 lx
+[  15288 ms][T6] OLED OK, lan ve 28: LED2: OFF | LX:93.3 | LED3: OFF
+[  15443 ms][T2] Lan doc 28: anh sang = 91.7 lx
+[  15662 ms][T1] LED1 da dao 140 lan, 10 lan gan nhat mat 1000 ms
+[  15943 ms][T2] Lan doc 29: anh sang = 90.8 lx
+[  16443 ms][T2] Lan doc 30: anh sang = 92.5 lx
+[  16662 ms][T1] LED1 da dao 150 lan, 10 lan gan nhat mat 1000 ms
+[  16943 ms][T2] Lan doc 31: anh sang = 92.5 lx
+[  17288 ms][T6] OLED OK, lan ve 32: LED2: OFF | LX:92.5 | LED3: OFF
+[  17443 ms][T2] Lan doc 32: anh sang = 93.3 lx
+[  17662 ms][T1] LED1 da dao 160 lan, 10 lan gan nhat mat 1000 ms
+[  17943 ms][T2] Lan doc 33: anh sang = 90.8 lx
+[  18443 ms][T2] Lan doc 34: anh sang = 90.8 lx
+[  18662 ms][T1] LED1 da dao 170 lan, 10 lan gan nhat mat 1000 ms
+[  18943 ms][T2] Lan doc 35: anh sang = 90.8 lx
+[  19288 ms][T6] OLED OK, lan ve 36: LED2: OFF | LX:90.8 | LED3: OFF
+[  19443 ms][T2] Lan doc 36: anh sang = 90.8 lx
+[  19662 ms][T1] LED1 da dao 180 lan, 10 lan gan nhat mat 1000 ms
+[  19943 ms][T2] Lan doc 37: anh sang = 92.5 lx
+[  20443 ms][T2] Lan doc 38: anh sang = 93.3 lx
+[  20662 ms][T1] LED1 da dao 190 lan, 10 lan gan nhat mat 1000 ms
+[  20943 ms][T2] Lan doc 39: anh sang = 91.7 lx
+[  21288 ms][T6] OLED OK, lan ve 40: LED2: OFF | LX:91.7 | LED3: OFF
+[  21443 ms][T2] Lan doc 40: anh sang = 93.3 lx
+[  21662 ms][T1] LED1 da dao 200 lan, 10 lan gan nhat mat 1000 ms
+[  21943 ms][T2] Lan doc 41: anh sang = 91.7 lx
+[  22443 ms][T2] Lan doc 42: anh sang = 91.7 lx
+[  22662 ms][T1] LED1 da dao 210 lan, 10 lan gan nhat mat 1000 ms
+[  22943 ms][T2] Lan doc 43: anh sang = 92.5 lx
+[  23288 ms][T6] OLED OK, lan ve 44: LED2: OFF | LX:92.5 | LED3: OFF
+[  23443 ms][T2] Lan doc 44: anh sang = 92.5 lx
+[  23662 ms][T1] LED1 da dao 220 lan, 10 lan gan nhat mat 1000 ms
+[  23943 ms][T2] Lan doc 45: anh sang = 91.7 lx
+[  24443 ms][T2] Lan doc 46: anh sang = 91.7 lx
+[  24662 ms][T1] LED1 da dao 230 lan, 10 lan gan nhat mat 1000 ms
+[  24943 ms][T2] Lan doc 47: anh sang = 90.8 lx
+[  25288 ms][T6] OLED OK, lan ve 48: LED2: OFF | LX:90.8 | LED3: OFF
+[  25443 ms][T2] Lan doc 48: anh sang = 91.7 lx
+[  25662 ms][T1] LED1 da dao 240 lan, 10 lan gan nhat mat 1000 ms
+[  25943 ms][T2] Lan doc 49: anh sang = 93.3 lx
+[  26443 ms][T2] Lan doc 50: anh sang = 93.3 lx
+[  26662 ms][T1] LED1 da dao 250 lan, 10 lan gan nhat mat 1000 ms
+[  26943 ms][T2] Lan doc 51: anh sang = 90.0 lx
+[  27288 ms][T6] OLED OK, lan ve 52: LED2: OFF | LX:90.0 | LED3: OFF
+[  27443 ms][T2] Lan doc 52: anh sang = 90.0 lx
+[  27662 ms][T1] LED1 da dao 260 lan, 10 lan gan nhat mat 1000 ms
+[  27943 ms][T2] Lan doc 53: anh sang = 90.8 lx
+[  28443 ms][T2] Lan doc 54: anh sang = 91.7 lx
+[  28662 ms][T1] LED1 da dao 270 lan, 10 lan gan nhat mat 1000 ms
+[  28943 ms][T2] Lan doc 55: anh sang = 93.3 lx
+[  29288 ms][T6] OLED OK, lan ve 56: LED2: OFF | LX:93.3 | LED3: OFF
+[  29443 ms][T2] Lan doc 56: anh sang = 93.3 lx
+[  29662 ms][T1] LED1 da dao 280 lan, 10 lan gan nhat mat 1000 ms
+[  29943 ms][T2] Lan doc 57: anh sang = 91.7 lx
+[  30443 ms][T2] Lan doc 58: anh sang = 90.8 lx
+[  30662 ms][T1] LED1 da dao 290 lan, 10 lan gan nhat mat 1000 ms
+[  30943 ms][T2] Lan doc 59: anh sang = 90.0 lx
+[  31288 ms][T6] OLED OK, lan ve 60: LED2: OFF | LX:90.0 | LED3: OFF
+[  31443 ms][T2] Lan doc 60: anh sang = 91.7 lx
+[  31662 ms][T1] LED1 da dao 300 lan, 10 lan gan nhat mat 1000 ms
+[  31943 ms][T2] Lan doc 61: anh sang = 91.7 lx
+[  32443 ms][T2] Lan doc 62: anh sang = 91.7 lx
+[  32662 ms][T1] LED1 da dao 310 lan, 10 lan gan nhat mat 1000 ms
+[  32943 ms][T2] Lan doc 63: anh sang = 91.7 lx
+[  33288 ms][T6] OLED OK, lan ve 64: LED2: OFF | LX:91.7 | LED3: OFF
+[  33443 ms][T2] Lan doc 64: anh sang = 91.7 lx
+[  33662 ms][T1] LED1 da dao 320 lan, 10 lan gan nhat mat 1000 ms
+[  33943 ms][T2] Lan doc 65: anh sang = 90.0 lx
+[  34443 ms][T2] Lan doc 66: anh sang = 92.5 lx
+[  34662 ms][T1] LED1 da dao 330 lan, 10 lan gan nhat mat 1000 ms
+[  34943 ms][T2] Lan doc 67: anh sang = 93.3 lx
+[  35288 ms][T6] OLED OK, lan ve 68: LED2: OFF | LX:93.3 | LED3: OFF
+[  35443 ms][T2] Lan doc 68: anh sang = 91.7 lx
+[  35662 ms][T1] LED1 da dao 340 lan, 10 lan gan nhat mat 1000 ms
+[  35943 ms][T2] Lan doc 69: anh sang = 90.8 lx
+[  36443 ms][T2] Lan doc 70: anh sang = 91.7 lx
+[  36662 ms][T1] LED1 da dao 350 lan, 10 lan gan nhat mat 1000 ms
+[  36943 ms][T2] Lan doc 71: anh sang = 90.8 lx
+[  37288 ms][T6] OLED OK, lan ve 72: LED2: OFF | LX:90.8 | LED3: OFF
+[  37443 ms][T2] Lan doc 72: anh sang = 91.7 lx
+[  37662 ms][T1] LED1 da dao 360 lan, 10 lan gan nhat mat 1000 ms
+[  37943 ms][T2] Lan doc 73: anh sang = 92.5 lx
+[  38443 ms][T2] Lan doc 74: anh sang = 91.7 lx
+[  38662 ms][T1] LED1 da dao 370 lan, 10 lan gan nhat mat 1000 ms
+[  38943 ms][T2] Lan doc 75: anh sang = 92.5 lx
+[  39288 ms][T6] OLED OK, lan ve 76: LED2: OFF | LX:92.5 | LED3: OFF
+[  39443 ms][T2] Lan doc 76: anh sang = 91.7 lx
+[  39662 ms][T1] LED1 da dao 380 lan, 10 lan gan nhat mat 1000 ms
+[  39943 ms][T2] Lan doc 77: anh sang = 91.7 lx
+[  40443 ms][T2] Lan doc 78: anh sang = 92.5 lx
+[  40662 ms][T1] LED1 da dao 390 lan, 10 lan gan nhat mat 1000 ms
+[  40943 ms][T2] Lan doc 79: anh sang = 93.3 lx
+[  41288 ms][T6] OLED OK, lan ve 80: LED2: OFF | LX:93.3 | LED3: OFF
+[  41443 ms][T2] Lan doc 80: anh sang = 91.7 lx
+[  41662 ms][T1] LED1 da dao 400 lan, 10 lan gan nhat mat 1000 ms
+[  41943 ms][T2] Lan doc 81: anh sang = 90.8 lx
+[  42443 ms][T2] Lan doc 82: anh sang = 91.7 lx
+[  42662 ms][T1] LED1 da dao 410 lan, 10 lan gan nhat mat 1000 ms
+[  42943 ms][T2] Lan doc 83: anh sang = 90.8 lx
+[  43288 ms][T6] OLED OK, lan ve 84: LED2: OFF | LX:90.8 | LED3: OFF
+[  43302 ms][T3] Nhan BTN1 -> LED2 = ON
+[  43443 ms][T2] Lan doc 84: anh sang = 92.5 lx
+[  43662 ms][T1] LED1 da dao 420 lan, 10 lan gan nhat mat 1000 ms
+[  43943 ms][T2] Lan doc 85: anh sang = 92.5 lx
+[  44443 ms][T2] Lan doc 86: anh sang = 91.7 lx
+[  44662 ms][T1] LED1 da dao 430 lan, 10 lan gan nhat mat 1000 ms
+[  44943 ms][T2] Lan doc 87: anh sang = 91.7 lx
+[  45288 ms][T6] OLED OK, lan ve 88: LED2: ON | LX:91.7 | LED3: OFF
+[  45443 ms][T2] Lan doc 88: anh sang = 90.8 lx
+[  45662 ms][T1] LED1 da dao 440 lan, 10 lan gan nhat mat 1000 ms
+[  45943 ms][T2] Lan doc 89: anh sang = 92.5 lx
+[  46443 ms][T2] Lan doc 90: anh sang = 91.7 lx
+[  46662 ms][T1] LED1 da dao 450 lan, 10 lan gan nhat mat 1000 ms
+[  46943 ms][T2] Lan doc 91: anh sang = 94.2 lx
+[  47288 ms][T6] OLED OK, lan ve 92: LED2: ON | LX:94.2 | LED3: OFF
+[  47443 ms][T2] Lan doc 92: anh sang = 93.3 lx
+[  47662 ms][T1] LED1 da dao 460 lan, 10 lan gan nhat mat 1000 ms
+[  47943 ms][T2] Lan doc 93: anh sang = 92.5 lx
+[  48443 ms][T2] Lan doc 94: anh sang = 90.0 lx
+[  48662 ms][T1] LED1 da dao 470 lan, 10 lan gan nhat mat 1000 ms
+[  48943 ms][T2] Lan doc 95: anh sang = 91.7 lx
+[  49288 ms][T6] OLED OK, lan ve 96: LED2: ON | LX:91.7 | LED3: OFF
+[  49443 ms][T2] Lan doc 96: anh sang = 91.7 lx
+[  49662 ms][T1] LED1 da dao 480 lan, 10 lan gan nhat mat 1000 ms
+[  49862 ms][T3] Nhan BTN1 -> LED2 = OFF
+[  49943 ms][T2] Lan doc 97: anh sang = 92.5 lx
+[  50443 ms][T2] Lan doc 98: anh sang = 91.7 lx
+[  50662 ms][T1] LED1 da dao 490 lan, 10 lan gan nhat mat 1000 ms
+[  50943 ms][T2] Lan doc 99: anh sang = 91.7 lx
+[  51022 ms][T4] Nhan BTN2 -> cap semaphore
+[  51022 ms][T5] Nhan duoc semaphore -> LED3 ON trong 3 s
+[  51288 ms][T6] OLED OK, lan ve 100: LED2: OFF | LX:91.7 | LED3: 3s
+[  51443 ms][T2] Lan doc 100: anh sang = 91.7 lx
+[  51662 ms][T1] LED1 da dao 500 lan, 10 lan gan nhat mat 1000 ms
+[  51943 ms][T2] Lan doc 101: anh sang = 91.7 lx
+[  52062 ms][T3] Nhan BTN1 -> LED2 = ON
+[  52443 ms][T2] Lan doc 102: anh sang = 91.7 lx
+[  52662 ms][T1] LED1 da dao 510 lan, 10 lan gan nhat mat 1000 ms
+[  52943 ms][T2] Lan doc 103: anh sang = 91.7 lx
+[  53182 ms][T3] Nhan BTN1 -> LED2 = OFF
+[  53288 ms][T6] OLED OK, lan ve 104: LED2: OFF | LX:91.7 | LED3: 1s
+[  53443 ms][T2] Lan doc 104: anh sang = 92.5 lx
+[  53662 ms][T1] LED1 da dao 520 lan, 10 lan gan nhat mat 1000 ms
+[  53802 ms][T3] Nhan BTN1 -> LED2 = ON
+[  53943 ms][T2] Lan doc 105: anh sang = 92.5 lx
+[  54022 ms][T5] LED3 OFF sau 3000 ms, cho semaphore tiep
+[  54262 ms][T3] Nhan BTN1 -> LED2 = OFF
+[  54443 ms][T2] Lan doc 106: anh sang = 90.8 lx
+[  54662 ms][T1] LED1 da dao 530 lan, 10 lan gan nhat mat 1000 ms
+[  54682 ms][T3] Nhan BTN1 -> LED2 = ON
+[  54943 ms][T2] Lan doc 107: anh sang = 91.7 lx
+[  55282 ms][T3] Nhan BTN1 -> LED2 = OFF
+[  55288 ms][T6] OLED OK, lan ve 108: LED2: ON | LX:91.7 | LED3: OFF
+[  55443 ms][T2] Lan doc 108: anh sang = 92.5 lx
+[  55602 ms][T3] Nhan BTN1 -> LED2 = ON
+[  55662 ms][T1] LED1 da dao 540 lan, 10 lan gan nhat mat 1000 ms
+[  55943 ms][T2] Lan doc 109: anh sang = 93.3 lx
+[  56062 ms][T3] Nhan BTN1 -> LED2 = OFF
+[  56382 ms][T3] Nhan BTN1 -> LED2 = ON
+[  56443 ms][T2] Lan doc 110: anh sang = 92.5 lx
+[  56662 ms][T1] LED1 da dao 550 lan, 10 lan gan nhat mat 1000 ms
+[  56762 ms][T3] Nhan BTN1 -> LED2 = OFF
+[  56943 ms][T2] Lan doc 111: anh sang = 91.7 lx
+[  57182 ms][T3] Nhan BTN1 -> LED2 = ON
+[  57288 ms][T6] OLED OK, lan ve 112: LED2: ON | LX:91.7 | LED3: OFF
+[  57443 ms][T2] Lan doc 112: anh sang = 91.7 lx
+[  57622 ms][T3] Nhan BTN1 -> LED2 = OFF
+[  57662 ms][T1] LED1 da dao 560 lan, 10 lan gan nhat mat 1000 ms
+[  57943 ms][T2] Lan doc 113: anh sang = 91.7 lx
+[  58022 ms][T3] Nhan BTN1 -> LED2 = ON
+[  58362 ms][T3] Nhan BTN1 -> LED2 = OFF
+[  58443 ms][T2] Lan doc 114: anh sang = 94.2 lx
+[  58662 ms][T1] LED1 da dao 570 lan, 10 lan gan nhat mat 1000 ms
+[  58943 ms][T2] Lan doc 115: anh sang = 92.5 lx
+[  59142 ms][T4] Nhan BTN2 -> cap semaphore
+[  59142 ms][T5] Nhan duoc semaphore -> LED3 ON trong 3 s
+[  59288 ms][T6] OLED OK, lan ve 116: LED2: OFF | LX:92.5 | LED3: 3s
+[  59443 ms][T2] Lan doc 116: anh sang = 90.8 lx
+[  59662 ms][T1] LED1 da dao 580 lan, 10 lan gan nhat mat 1000 ms
+[  59943 ms][T2] Lan doc 117: anh sang = 92.5 lx
+[  60443 ms][T2] Lan doc 118: anh sang = 92.5 lx
+[  60662 ms][T1] LED1 da dao 590 lan, 10 lan gan nhat mat 1000 ms
+[  60943 ms][T2] Lan doc 119: anh sang = 91.7 lx
+[  61288 ms][T6] OLED OK, lan ve 120: LED2: OFF | LX:91.7 | LED3: 1s
+[  61443 ms][T2] Lan doc 120: anh sang = 94.2 lx
+[  61662 ms][T1] LED1 da dao 600 lan, 10 lan gan nhat mat 1000 ms
+[  61943 ms][T2] Lan doc 121: anh sang = 91.7 lx
+[  62142 ms][T5] LED3 OFF sau 3000 ms, cho semaphore tiep
+[  62443 ms][T2] Lan doc 122: anh sang = 93.3 lx
+[  62662 ms][T1] LED1 da dao 610 lan, 10 lan gan nhat mat 1000 ms
+[  62943 ms][T2] Lan doc 123: anh sang = 90.8 lx
+[  63288 ms][T6] OLED OK, lan ve 124: LED2: OFF | LX:90.8 | LED3: OFF
+[  63443 ms][T2] Lan doc 124: anh sang = 92.5 lx
+[  63662 ms][T1] LED1 da dao 620 lan, 10 lan gan nhat mat 1000 ms
+[  63943 ms][T2] Lan doc 125: anh sang = 90.0 lx
+[  64443 ms][T2] Lan doc 126: anh sang = 17.5 lx
+[  64662 ms][T1] LED1 da dao 630 lan, 10 lan gan nhat mat 1000 ms
+[  64943 ms][T2] Lan doc 127: anh sang = 4.2 lx
+[  65288 ms][T6] OLED OK, lan ve 128: LED2: OFF | LX:4.2 | LED3: OFF
+[  65443 ms][T2] Lan doc 128: anh sang = 2.5 lx
+[  65662 ms][T1] LED1 da dao 640 lan, 10 lan gan nhat mat 1000 ms
+[  65943 ms][T2] Lan doc 129: anh sang = 2.5 lx
+[  66443 ms][T2] Lan doc 130: anh sang = 2.5 lx
+[  66662 ms][T1] LED1 da dao 650 lan, 10 lan gan nhat mat 1000 ms
+[  66943 ms][T2] Lan doc 131: anh sang = 1.7 lx
+[  67288 ms][T6] OLED OK, lan ve 132: LED2: OFF | LX:1.7 | LED3: OFF
+[  67442 ms][T2] Lan doc 132: anh sang = 0.0 lx
+[  67662 ms][T1] LED1 da dao 660 lan, 10 lan gan nhat mat 1000 ms
+[  67943 ms][T2] Lan doc 133: anh sang = 1.7 lx
+[  68443 ms][T2] Lan doc 134: anh sang = 0.8 lx
+[  68662 ms][T1] LED1 da dao 670 lan, 10 lan gan nhat mat 1000 ms
+[  68943 ms][T2] Lan doc 135: anh sang = 0.8 lx
+[  69288 ms][T6] OLED OK, lan ve 136: LED2: OFF | LX:0.8 | LED3: OFF
+[  69442 ms][T2] Lan doc 136: anh sang = 0.0 lx
+[  69662 ms][T1] LED1 da dao 680 lan, 10 lan gan nhat mat 1000 ms
+[  69943 ms][T2] Lan doc 137: anh sang = 1.7 lx
+[  70443 ms][T2] Lan doc 138: anh sang = 2.5 lx
+[  70662 ms][T1] LED1 da dao 690 lan, 10 lan gan nhat mat 1000 ms
+[  70943 ms][T2] Lan doc 139: anh sang = 90.8 lx
+[  71288 ms][T6] OLED OK, lan ve 140: LED2: OFF | LX:90.8 | LED3: OFF
+[  71443 ms][T2] Lan doc 140: anh sang = 93.3 lx
+[  71662 ms][T1] LED1 da dao 700 lan, 10 lan gan nhat mat 1000 ms
+[  71943 ms][T2] Lan doc 141: anh sang = 90.0 lx
+[  72443 ms][T2] Lan doc 142: anh sang = 91.7 lx
+[  72662 ms][T1] LED1 da dao 710 lan, 10 lan gan nhat mat 1000 ms
+[  72943 ms][T2] Lan doc 143: anh sang = 90.8 lx
+[  73288 ms][T6] OLED OK, lan ve 144: LED2: OFF | LX:90.8 | LED3: OFF
+[  73443 ms][T2] Lan doc 144: anh sang = 90.8 lx
+[  73662 ms][T1] LED1 da dao 720 lan, 10 lan gan nhat mat 1000 ms
+[  73943 ms][T2] Lan doc 145: anh sang = 91.7 lx
+[  74443 ms][T2] Lan doc 146: anh sang = 91.7 lx
+[  74662 ms][T1] LED1 da dao 730 lan, 10 lan gan nhat mat 1000 ms
+[  74943 ms][T2] Lan doc 147: anh sang = 90.8 lx
+[  75288 ms][T6] OLED OK, lan ve 148: LED2: OFF | LX:90.8 | LED3: OFF
+[  75443 ms][T2] Lan doc 148: anh sang = 245.0 lx
+[  75662 ms][T1] LED1 da dao 740 lan, 10 lan gan nhat mat 1000 ms
+[  75943 ms][T2] Lan doc 149: anh sang = 370.0 lx
+[  76443 ms][T2] Lan doc 150: anh sang = 730.0 lx
+[  76662 ms][T1] LED1 da dao 750 lan, 10 lan gan nhat mat 1000 ms
+[  76943 ms][T2] Lan doc 151: anh sang = 507.5 lx
+[  77288 ms][T6] OLED OK, lan ve 152: LED2: OFF | LX:507.5 | LED3: OFF
+[  77443 ms][T2] Lan doc 152: anh sang = 483.3 lx
+[  77662 ms][T1] LED1 da dao 760 lan, 10 lan gan nhat mat 1000 ms
+[  77943 ms][T2] Lan doc 153: anh sang = 463.3 lx
+[  78443 ms][T2] Lan doc 154: anh sang = 528.3 lx
+[  78662 ms][T1] LED1 da dao 770 lan, 10 lan gan nhat mat 1000 ms
+[  78702 ms][T3] Nhan BTN1 -> LED2 = ON
+[  78943 ms][T2] Lan doc 155: anh sang = 507.5 lx
+[  79288 ms][T6] OLED OK, lan ve 156: LED2: ON | LX:507.5 | LED3: OFF
+[  79443 ms][T2] Lan doc 156: anh sang = 524.2 lx
+[  79662 ms][T1] LED1 da dao 780 lan, 10 lan gan nhat mat 1000 ms
+[  79943 ms][T2] Lan doc 157: anh sang = 531.7 lx
+[  80443 ms][T2] Lan doc 158: anh sang = 548.3 lx
+[  80662 ms][T1] LED1 da dao 790 lan, 10 lan gan nhat mat 1000 ms
+[  80943 ms][T2] Lan doc 159: anh sang = 575.8 lx
+[  81288 ms][T6] OLED OK, lan ve 160: LED2: ON | LX:575.8 | LED3: OFF
+[  81443 ms][T2] Lan doc 160: anh sang = 590.0 lx
+[  81662 ms][T1] LED1 da dao 800 lan, 10 lan gan nhat mat 1000 ms
+[  81943 ms][T2] Lan doc 161: anh sang = 596.7 lx
+[  82042 ms][T4] Nhan BTN2 -> cap semaphore
+[  82042 ms][T5] Nhan duoc semaphore -> LED3 ON trong 3 s
+[  82443 ms][T2] Lan doc 162: anh sang = 598.3 lx
+[  82662 ms][T1] LED1 da dao 810 lan, 10 lan gan nhat mat 1000 ms
+[  82943 ms][T2] Lan doc 163: anh sang = 607.5 lx
+[  83288 ms][T6] OLED OK, lan ve 164: LED2: ON | LX:607.5 | LED3: 2s
+[  83382 ms][T3] Nhan BTN1 -> LED2 = OFF
+[  83443 ms][T2] Lan doc 164: anh sang = 607.5 lx
+[  83662 ms][T1] LED1 da dao 820 lan, 10 lan gan nhat mat 1000 ms
+[  83822 ms][T3] Nhan BTN1 -> LED2 = ON
+[  83943 ms][T2] Lan doc 165: anh sang = 600.0 lx
+[  84443 ms][T2] Lan doc 166: anh sang = 610.8 lx
+[  84662 ms][T1] LED1 da dao 830 lan, 10 lan gan nhat mat 1000 ms
+[  84942 ms][T4] Nhan BTN2 -> cap semaphore
+[  84943 ms][T2] Lan doc 167: anh sang = 623.3 lx
+[  85042 ms][T5] LED3 OFF sau 3000 ms, cho semaphore tiep
+[  85042 ms][T5] Nhan duoc semaphore -> LED3 ON trong 3 s
+[  85288 ms][T6] OLED OK, lan ve 168: LED2: ON | LX:623.3 | LED3: 3s
+[  85443 ms][T2] Lan doc 168: anh sang = 606.7 lx
+[  85662 ms][T1] LED1 da dao 840 lan, 10 lan gan nhat mat 1000 ms
+[  85943 ms][T2] Lan doc 169: anh sang = 605.8 lx
+[  86443 ms][T2] Lan doc 170: anh sang = 607.5 lx
+[  86602 ms][T4] Nhan BTN2 -> cap semaphore
+[  86662 ms][T1] LED1 da dao 850 lan, 10 lan gan nhat mat 1000 ms
+[  86943 ms][T2] Lan doc 171: anh sang = 592.5 lx
+[  87288 ms][T6] OLED OK, lan ve 172: LED2: ON | LX:592.5 | LED3: 1s
+[  87443 ms][T2] Lan doc 172: anh sang = 605.8 lx
+[  87662 ms][T1] LED1 da dao 860 lan, 10 lan gan nhat mat 1000 ms
+[  87943 ms][T2] Lan doc 173: anh sang = 611.7 lx
+[  88042 ms][T5] LED3 OFF sau 3000 ms, cho semaphore tiep
+[  88042 ms][T5] Nhan duoc semaphore -> LED3 ON trong 3 s
+[  88202 ms][T4] Nhan BTN2 -> cap semaphore
+[  88443 ms][T2] Lan doc 174: anh sang = 605.8 lx
+[  88662 ms][T1] LED1 da dao 870 lan, 10 lan gan nhat mat 1000 ms
+[  88943 ms][T2] Lan doc 175: anh sang = 605.8 lx
+[  89288 ms][T6] OLED OK, lan ve 176: LED2: ON | LX:605.8 | LED3: 2s
+[  89443 ms][T2] Lan doc 176: anh sang = 604.2 lx
+[  89562 ms][T3] Nhan BTN1 -> LED2 = OFF
+[  89662 ms][T1] LED1 da dao 880 lan, 10 lan gan nhat mat 1000 ms
+[  89943 ms][T2] Lan doc 177: anh sang = 605.0 lx
+[  90222 ms][T3] Nhan BTN1 -> LED2 = ON
+[  90443 ms][T2] Lan doc 178: anh sang = 614.2 lx
+[  90662 ms][T1] LED1 da dao 890 lan, 10 lan gan nhat mat 1000 ms
+[  90742 ms][T3] Nhan BTN1 -> LED2 = OFF
+[  90943 ms][T2] Lan doc 179: anh sang = 627.5 lx
+[  91042 ms][T5] LED3 OFF sau 3000 ms, cho semaphore tiep
+[  91042 ms][T5] Nhan duoc semaphore -> LED3 ON trong 3 s
+[  91162 ms][T3] Nhan BTN1 -> LED2 = ON
+[  91288 ms][T6] OLED OK, lan ve 180: LED2: ON | LX:627.5 | LED3: 3s
+[  91443 ms][T2] Lan doc 180: anh sang = 627.5 lx
+[  91662 ms][T1] LED1 da dao 900 lan, 10 lan gan nhat mat 1000 ms
+[  91943 ms][T2] Lan doc 181: anh sang = 623.3 lx
+[  92443 ms][T2] Lan doc 182: anh sang = 649.2 lx
+[  92662 ms][T1] LED1 da dao 910 lan, 10 lan gan nhat mat 1000 ms
+[  92943 ms][T2] Lan doc 183: anh sang = 2096.7 lx
+[  93288 ms][T6] OLED OK, lan ve 184: LED2: ON | LX:2096.7 | LED3: 1s
+[  93443 ms][T2] Lan doc 184: anh sang = 2880.0 lx
+[  93662 ms][T1] LED1 da dao 920 lan, 10 lan gan nhat mat 1000 ms
+[  93943 ms][T2] Lan doc 185: anh sang = 3392.5 lx
+[  94042 ms][T5] LED3 OFF sau 3000 ms, cho semaphore tiep
+[  94443 ms][T2] Lan doc 186: anh sang = 4444.2 lx
+[  94662 ms][T1] LED1 da dao 930 lan, 10 lan gan nhat mat 1000 ms
+[  94943 ms][T2] Lan doc 187: anh sang = 4820.0 lx
+[  95288 ms][T6] OLED OK, lan ve 188: LED2: ON | LX:4820.0 | LED3: OFF
+[  95443 ms][T2] Lan doc 188: anh sang = 3360.8 lx
+[  95662 ms][T1] LED1 da dao 940 lan, 10 lan gan nhat mat 1000 ms
+[  95943 ms][T2] Lan doc 189: anh sang = 535.8 lx
+[  96443 ms][T2] Lan doc 190: anh sang = 108.3 lx
+[  96662 ms][T1] LED1 da dao 950 lan, 10 lan gan nhat mat 1000 ms
+[  96943 ms][T2] Lan doc 191: anh sang = 91.7 lx
+[  97288 ms][T6] OLED OK, lan ve 192: LED2: ON | LX:91.7 | LED3: OFF
+[  97443 ms][T2] Lan doc 192: anh sang = 88.3 lx
+[  97662 ms][T1] LED1 da dao 960 lan, 10 lan gan nhat mat 1000 ms
+[  97943 ms][T2] Lan doc 193: anh sang = 91.7 lx
+[  98443 ms][T2] Lan doc 194: anh sang = 90.8 lx
+[  98662 ms][T1] LED1 da dao 970 lan, 10 lan gan nhat mat 1000 ms
+[  98943 ms][T2] Lan doc 195: anh sang = 90.8 lx
+[  99202 ms][T3] Nhan BTN1 -> LED2 = OFF
+[  99288 ms][T6] OLED OK, lan ve 196: LED2: OFF | LX:90.8 | LED3: OFF
+[  99443 ms][T2] Lan doc 196: anh sang = 90.0 lx
+[  99662 ms][T1] LED1 da dao 980 lan, 10 lan gan nhat mat 1000 ms
+[  99943 ms][T2] Lan doc 197: anh sang = 93.3 lx
+[ 100443 ms][T2] Lan doc 198: anh sang = 90.0 lx
+[ 100662 ms][T1] LED1 da dao 990 lan, 10 lan gan nhat mat 1000 ms
+[ 100942 ms][T4] Nhan BTN2 -> cap semaphore
+[ 100942 ms][T5] Nhan duoc semaphore -> LED3 ON trong 3 s
+[ 100943 ms][T2] Lan doc 199: anh sang = 87.5 lx
+[ 101288 ms][T6] OLED OK, lan ve 200: LED2: OFF | LX:87.5 | LED3: 3s
+[ 101443 ms][T2] Lan doc 200: anh sang = 90.0 lx
+[ 101662 ms][T1] LED1 da dao 1000 lan, 10 lan gan nhat mat 1000 ms
+[ 101943 ms][T2] Lan doc 201: anh sang = 90.0 lx
+[ 102062 ms][T4] Nhan BTN2 -> cap semaphore
+[ 102443 ms][T2] Lan doc 202: anh sang = 91.7 lx
+[ 102662 ms][T1] LED1 da dao 1010 lan, 10 lan gan nhat mat 1000 ms
+[ 102942 ms][T4] Nhan BTN2 -> semaphore dang co san, lan nhan nay khong duoc tinh them
+[ 102943 ms][T2] Lan doc 203: anh sang = 90.8 lx
+[ 103288 ms][T6] OLED OK, lan ve 204: LED2: OFF | LX:90.8 | LED3: 1s
+[ 103442 ms][T4] Nhan BTN2 -> semaphore dang co san, lan nhan nay khong duoc tinh them
+[ 103443 ms][T2] Lan doc 204: anh sang = 90.8 lx
+[ 103642 ms][T4] Nhan BTN2 -> semaphore dang co san, lan nhan nay khong duoc tinh them
+[ 103662 ms][T1] LED1 da dao 1020 lan, 10 lan gan nhat mat 1000 ms
+[ 103942 ms][T5] LED3 OFF sau 3000 ms, cho semaphore tiep
+[ 103942 ms][T5] Nhan duoc semaphore -> LED3 ON trong 3 s
+[ 103943 ms][T2] Lan doc 205: anh sang = 90.0 lx
+[ 104443 ms][T2] Lan doc 206: anh sang = 92.5 lx
+[ 104662 ms][T1] LED1 da dao 1030 lan, 10 lan gan nhat mat 1000 ms
+[ 104943 ms][T2] Lan doc 207: anh sang = 90.0 lx
+[ 105288 ms][T6] OLED OK, lan ve 208: LED2: OFF | LX:90.0 | LED3: 2s
+[ 105443 ms][T2] Lan doc 208: anh sang = 92.5 lx
+[ 105662 ms][T1] LED1 da dao 1040 lan, 10 lan gan nhat mat 1000 ms
+[ 105943 ms][T2] Lan doc 209: anh sang = 90.0 lx
+[ 106443 ms][T2] Lan doc 210: anh sang = 90.8 lx
+[ 106662 ms][T1] LED1 da dao 1050 lan, 10 lan gan nhat mat 1000 ms
+[ 106942 ms][T5] LED3 OFF sau 3000 ms, cho semaphore tiep
+[ 106943 ms][T2] Lan doc 211: anh sang = 90.8 lx
+[ 107288 ms][T6] OLED OK, lan ve 212: LED2: OFF | LX:90.8 | LED3: OFF
+[ 107443 ms][T2] Lan doc 212: anh sang = 89.2 lx
+[ 107662 ms][T1] LED1 da dao 1060 lan, 10 lan gan nhat mat 1000 ms
+[ 107682 ms][T4] Nhan BTN2 -> cap semaphore
+[ 107682 ms][T5] Nhan duoc semaphore -> LED3 ON trong 3 s
+[ 107943 ms][T2] Lan doc 213: anh sang = 90.0 lx
+[ 108443 ms][T2] Lan doc 214: anh sang = 90.8 lx
+[ 108662 ms][T1] LED1 da dao 1070 lan, 10 lan gan nhat mat 1000 ms
+[ 108943 ms][T2] Lan doc 215: anh sang = 90.0 lx
+[ 109288 ms][T6] OLED OK, lan ve 216: LED2: OFF | LX:90.0 | LED3: 2s
+[ 109362 ms][T4] Nhan BTN2 -> cap semaphore
+[ 109443 ms][T2] Lan doc 216: anh sang = 89.2 lx
+[ 109662 ms][T1] LED1 da dao 1080 lan, 10 lan gan nhat mat 1000 ms
+[ 109943 ms][T2] Lan doc 217: anh sang = 90.0 lx
+[ 110443 ms][T2] Lan doc 218: anh sang = 91.7 lx
+[ 110662 ms][T1] LED1 da dao 1090 lan, 10 lan gan nhat mat 1000 ms
+[ 110682 ms][T5] LED3 OFF sau 3000 ms, cho semaphore tiep
+[ 110682 ms][T5] Nhan duoc semaphore -> LED3 ON trong 3 s
+[ 110943 ms][T2] Lan doc 219: anh sang = 90.0 lx
+[ 111288 ms][T6] OLED OK, lan ve 220: LED2: OFF | LX:90.0 | LED3: 3s
+[ 111443 ms][T2] Lan doc 220: anh sang = 91.7 lx
+[ 111662 ms][T1] LED1 da dao 1100 lan, 10 lan gan nhat mat 1000 ms
+[ 111943 ms][T2] Lan doc 221: anh sang = 90.8 lx
+[ 112443 ms][T2] Lan doc 222: anh sang = 89.2 lx
+[ 112662 ms][T1] LED1 da dao 1110 lan, 10 lan gan nhat mat 1000 ms
+[ 112943 ms][T2] Lan doc 223: anh sang = 90.8 lx
+[ 113288 ms][T6] OLED OK, lan ve 224: LED2: OFF | LX:90.8 | LED3: 1s
+[ 113443 ms][T2] Lan doc 224: anh sang = 90.8 lx
+[ 113662 ms][T1] LED1 da dao 1120 lan, 10 lan gan nhat mat 1000 ms
+[ 113682 ms][T5] LED3 OFF sau 3000 ms, cho semaphore tiep
+[ 113943 ms][T2] Lan doc 225: anh sang = 90.0 lx
+[ 114202 ms][T4] Nhan BTN2 -> cap semaphore
+[ 114202 ms][T5] Nhan duoc semaphore -> LED3 ON trong 3 s
+[ 114443 ms][T2] Lan doc 226: anh sang = 91.7 lx
+[ 114662 ms][T1] LED1 da dao 1130 lan, 10 lan gan nhat mat 1000 ms
+[ 114802 ms][T4] Nhan BTN2 -> cap semaphore
+[ 114943 ms][T2] Lan doc 227: anh sang = 90.8 lx
+[ 115282 ms][T4] Nhan BTN2 -> semaphore dang co san, lan nhan nay khong duoc tinh them
+[ 115288 ms][T6] OLED OK, lan ve 228: LED2: OFF | LX:90.8 | LED3: 2s
+[ 115443 ms][T2] Lan doc 228: anh sang = 90.0 lx
+[ 115662 ms][T1] LED1 da dao 1140 lan, 10 lan gan nhat mat 1000 ms
+[ 115762 ms][T4] Nhan BTN2 -> semaphore dang co san, lan nhan nay khong duoc tinh them
+[ 115943 ms][T2] Lan doc 229: anh sang = 90.0 lx
+[ 116443 ms][T2] Lan doc 230: anh sang = 90.0 lx
+[ 116662 ms][T1] LED1 da dao 1150 lan, 10 lan gan nhat mat 1000 ms
+[ 116942 ms][T3] Nhan BTN1 -> LED2 = ON
+[ 116943 ms][T2] Lan doc 231: anh sang = 90.8 lx
+[ 117202 ms][T5] LED3 OFF sau 3000 ms, cho semaphore tiep
+[ 117202 ms][T5] Nhan duoc semaphore -> LED3 ON trong 3 s
+[ 117288 ms][T6] OLED OK, lan ve 232: LED2: ON | LX:90.8 | LED3: 3s
+[ 117443 ms][T2] Lan doc 232: anh sang = 91.7 lx
+[ 117662 ms][T1] LED1 da dao 1160 lan, 10 lan gan nhat mat 1000 ms
+[ 117902 ms][T3] Nhan BTN1 -> LED2 = OFF
+[ 117943 ms][T2] Lan doc 233: anh sang = 93.3 lx
+[ 118443 ms][T2] Lan doc 234: anh sang = 87.5 lx
+[ 118562 ms][T3] Nhan BTN1 -> LED2 = ON
+[ 118662 ms][T1] LED1 da dao 1170 lan, 10 lan gan nhat mat 1000 ms
+[ 118943 ms][T2] Lan doc 235: anh sang = 89.2 lx
+[ 119262 ms][T3] Nhan BTN1 -> LED2 = OFF
+[ 119288 ms][T6] OLED OK, lan ve 236: LED2: OFF | LX:89.2 | LED3: 1s
+[ 119443 ms][T2] Lan doc 236: anh sang = 90.8 lx
+[ 119662 ms][T1] LED1 da dao 1180 lan, 10 lan gan nhat mat 1000 ms
+[ 119943 ms][T2] Lan doc 237: anh sang = 90.0 lx
+[ 120082 ms][T3] Nhan BTN1 -> LED2 = ON
+[ 120202 ms][T5] LED3 OFF sau 3000 ms, cho semaphore tiep
+[ 120443 ms][T2] Lan doc 238: anh sang = 90.8 lx
+[ 120662 ms][T1] LED1 da dao 1190 lan, 10 lan gan nhat mat 1000 ms
+[ 120943 ms][T2] Lan doc 239: anh sang = 90.0 lx
+[ 121002 ms][T3] Nhan BTN1 -> LED2 = OFF
+[ 121288 ms][T6] OLED OK, lan ve 240: LED2: OFF | LX:90.0 | LED3: OFF
+[ 121443 ms][T2] Lan doc 240: anh sang = 88.3 lx
+[ 121662 ms][T1] LED1 da dao 1200 lan, 10 lan gan nhat mat 1000 ms
+[ 121662 ms][T3] Nhan BTN1 -> LED2 = ON
+[ 121943 ms][T2] Lan doc 241: anh sang = 90.0 lx
+[ 122302 ms][T3] Nhan BTN1 -> LED2 = OFF
+[ 122443 ms][T2] Lan doc 242: anh sang = 90.8 lx
+[ 122662 ms][T1] LED1 da dao 1210 lan, 10 lan gan nhat mat 1000 ms
+[ 122943 ms][T2] Lan doc 243: anh sang = 90.8 lx
+[ 122962 ms][T3] Nhan BTN1 -> LED2 = ON
+[ 123288 ms][T6] OLED OK, lan ve 244: LED2: ON | LX:90.8 | LED3: OFF
+[ 123443 ms][T2] Lan doc 244: anh sang = 91.7 lx
+[ 123602 ms][T3] Nhan BTN1 -> LED2 = OFF
+[ 123662 ms][T1] LED1 da dao 1220 lan, 10 lan gan nhat mat 1000 ms
+[ 123943 ms][T2] Lan doc 245: anh sang = 89.2 lx
+[ 124443 ms][T2] Lan doc 246: anh sang = 89.2 lx
+[ 124662 ms][T1] LED1 da dao 1230 lan, 10 lan gan nhat mat 1000 ms
+[ 124943 ms][T2] Lan doc 247: anh sang = 90.8 lx
+[ 125288 ms][T6] OLED OK, lan ve 248: LED2: OFF | LX:90.8 | LED3: OFF
+[ 125443 ms][T2] Lan doc 248: anh sang = 90.0 lx
+[ 125662 ms][T1] LED1 da dao 1240 lan, 10 lan gan nhat mat 1000 ms
+[ 125943 ms][T2] Lan doc 249: anh sang = 91.7 lx
+[ 126443 ms][T2] Lan doc 250: anh sang = 91.7 lx
+[ 126662 ms][T1] LED1 da dao 1250 lan, 10 lan gan nhat mat 1000 ms
+[ 126943 ms][T2] Lan doc 251: anh sang = 88.3 lx
+[ 127288 ms][T6] OLED OK, lan ve 252: LED2: OFF | LX:88.3 | LED3: OFF
+[ 127443 ms][T2] Lan doc 252: anh sang = 88.3 lx
+[ 127662 ms][T1] LED1 da dao 1260 lan, 10 lan gan nhat mat 1000 ms
+[ 127943 ms][T2] Lan doc 253: anh sang = 89.2 lx
+[ 128443 ms][T2] Lan doc 254: anh sang = 90.0 lx
+[ 128662 ms][T1] LED1 da dao 1270 lan, 10 lan gan nhat mat 1000 ms
+[ 128943 ms][T2] Lan doc 255: anh sang = 89.2 lx
+[ 129288 ms][T6] OLED OK, lan ve 256: LED2: OFF | LX:89.2 | LED3: OFF
+[ 129443 ms][T2] Lan doc 256: anh sang = 90.8 lx
+[ 129662 ms][T1] LED1 da dao 1280 lan, 10 lan gan nhat mat 1000 ms
+[ 129943 ms][T2] Lan doc 257: anh sang = 90.8 lx
