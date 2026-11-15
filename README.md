@@ -39,7 +39,7 @@ Dự án minh hoạ các kiến thức cốt lõi của FreeRTOS, mỗi kỹ thu
 | 4 | Nhấn Button2 để cấp (give) Binary Semaphore | ✅ |
 | 5 | Đợi Binary Semaphore; khi có thì bật LED3 trong 3 s rồi tắt | ✅ |
 | 6 | Hiển thị LED2, giá trị ánh sáng, LED3 (đếm ngược → Off) lên OLED, 500 ms/lần | ✅ |
-| 7+ | Kỹ thuật FreeRTOS mở rộng | 📝 Đề xuất (xem báo cáo, mục 5.3) |
+| 7+ | Kỹ thuật FreeRTOS mở rộng | 📝 Hướng phát triển (xem báo cáo, Chương 6) |
 
 ## 3. Phần cứng
 
@@ -156,7 +156,7 @@ pio device monitor                       # mở Serial Monitor (115200 baud)
 
 ## 8. Báo cáo
 
-📄 [`report/Report_ProjectCaNhan_FreeRTOS_ESP32.docx`](report/Report_ProjectCaNhan_FreeRTOS_ESP32.docx) — tìm hiểu FreeRTOS, thiết kế hệ thống, phân tích từng task, đánh giá kết quả.
+📄 [`report/Report_ProjectCaNhan_FreeRTOS_ESP32.docx`](report/Report_ProjectCaNhan_FreeRTOS_ESP32.docx) — tìm hiểu FreeRTOS, thiết kế hệ thống, phân tích từng task, đánh giá kết quả và kết luận.
 
 ## 9. Tài liệu tham khảo
 
