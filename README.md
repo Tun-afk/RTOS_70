@@ -156,7 +156,7 @@ pio device monitor                       # mở Serial Monitor (115200 baud)
 
 ## 8. Báo cáo
 
-📄 [`report/Report_ProjectCaNhan_FreeRTOS_ESP32.docx`](report/Report_ProjectCaNhan_FreeRTOS_ESP32.docx) — tìm hiểu FreeRTOS, thiết kế hệ thống, phân tích từng task, đánh giá kết quả và kết luận.
+📄 [`report/FinalReport_FreeRTOS_ESP32S3_EN.docx`](report/FinalReport_FreeRTOS_ESP32S3_EN.docx) — báo cáo cuối kỳ (tiếng Anh): tìm hiểu FreeRTOS kèm minh chứng trong code, thiết kế hệ thống, phân tích từng task, kết quả thực nghiệm và kết luận.
 
 ## 9. Tài liệu tham khảo
 
